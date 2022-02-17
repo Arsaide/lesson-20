@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "info card-maria card-lera"
+        "info card-maria card-kira"
+        "info card-nika card-nika";
+    height: 100vh;
+}
+.container-item {
+    background-color: rgb(179, 62, 62);
+    border: 1px dashed #ece89d;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2rem;
+}
+.container-item-info {
+    height: 80vh;
+}
+.l-info {
+    grid-area: info;
+}
+.l-card-maria {
+    grid-area: card-maria;
+}
+.l-card-lera {
+    grid-area: card-lera;
+}
+.l-card-nika {
+    grid-area: card-nika;
+}
+.l-card-kira {
+    grid-area: card-kira;
+}
+.btn {
+    text-decoration: none;
+    color: black;
+}
