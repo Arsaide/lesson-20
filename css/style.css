@@ -4,7 +4,7 @@
 }
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1.6fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
         "info card-maria card-lera"
@@ -13,36 +13,110 @@
     height: 100vh;
 }
 .container-item {
-    background-color: rgb(179, 62, 62);
-    border: 1px dashed #ece89d;
+    background-color: white;
     padding: 10px;
-    color: #fff;
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 2rem;
-}
-.container-item-info {
-    height: 80vh;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 70vh;
+    margin-top: 20vh;
 }
 .l-info {
     grid-area: info;
 }
 .l-card-maria {
     grid-area: card-maria;
+    background-color: rgb(154, 45, 243);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 18px;
+}
+.user {
+    width: 60px;
+    height: 60px;
+    border: 1px white solid;
+    border-radius: 50%;
 }
 .l-card-lera {
     grid-area: card-lera;
+    background-color: rgb(23, 246, 109);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 18px;
 }
 .l-card-nika {
     grid-area: card-nika;
+    background-color: rgb(250, 82, 82);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 18px;
 }
 .l-card-kira {
     grid-area: card-kira;
+    background-color: rgb(235, 178, 57);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 18px;
+}
+li {
+    list-style-type: none;
 }
 .btn {
     text-decoration: none;
     color: black;
+    border: gray 1px solid;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
 }
+.btn:hover {
+    transform: translateY(10px);
+}
+.btn:focus {
+    background-color: salmon;
+    animation: jittery 6s infinite;
+}
+@keyframes jittery {
+    5%,
+    50% {
+      transform: scale(1);
+    }
+  
+    10% {
+      transform: scale(0.9);
+    }
+  
+    15% {
+      transform: scale(1.15);
+    }
+  
+    20% {
+      transform: scale(1.15) rotate(-5deg);
+    }
+  
+    25% {
+      transform: scale(1.15) rotate(5deg);
+    }
+  
+    30% {
+      transform: scale(1.15) rotate(-3deg);
+    }
+  
+    35% {
+      transform: scale(1.15) rotate(2deg);
+    }
+  
+    40% {
+      transform: scale(1.15) rotate(0);
+    }
+  }
